@@ -12,7 +12,7 @@ namespace CataParuto
         private GraphicsDeviceManager _graphics;
         private SpriteBatch _spriteBatch;
 
-        Texture2D _cat;
+        Texture2D _cat, _stick;
         Vector2 _catPos;
 
         int speed;
@@ -43,6 +43,8 @@ namespace CataParuto
             // TODO: use this.Content to load your game content here
             _cat = Content.Load<Texture2D>("visual/sprite/Cat_01");
             _catPos = new Vector2(100, 100);
+
+            _stick = Content.Load<Texture2D>("visual/sprite/Stick_02");
         }
 
         protected override void Update(GameTime gameTime)
@@ -54,11 +56,11 @@ namespace CataParuto
             _currentKey = Keyboard.GetState();
             speed = 3;
 
-            if(_currentKey.IsKeyDown(Keys.Right))
+            if(_currentKey.IsKeyDown(Keys.Right) || _currentKey.IsKeyDown(Keys.D))
             {
                 _catPos.X += speed;   
             }
-            if(_currentKey.IsKeyDown(Keys.Left))
+            if(_currentKey.IsKeyDown(Keys.Left) || _currentKey.IsKeyDown(Keys.A))
             {
                 _catPos.X -= speed;
             }
@@ -68,13 +70,14 @@ namespace CataParuto
 
         protected override void Draw(GameTime gameTime)
         {
-            GraphicsDevice.Clear(Color.Black);
+            GraphicsDevice.Clear(Color.White);
 
             // TODO: Add your drawing code here
             _spriteBatch.Begin();
 
             // Drawing
-            _spriteBatch.Draw(_cat, _catPos, Color.White);
+            _spriteBatch.Draw(_cat, _catPos, Color.Orange);
+            _spriteBatch.Draw(_stick, new Vector2(350, 100), null, Color.White, 0f, Vector2.Zero, 0.08f, SpriteEffects.None,0);
 
             _spriteBatch.End();
 
