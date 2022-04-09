@@ -2,7 +2,7 @@
   <MonoDevelop.Ide.Workbench>
     <Files>
       <File FileName="CataParuto/Program.cs" Line="11" Column="28" />
-      <File FileName="CataParuto/CataParuto.cs" Line="39" Column="68" />
+      <File FileName="CataParuto/CataParuto.cs" Line="16" Column="25" />
     </Files>
     <Pads>
       <Pad Id="ProjectPad">
@@ -11,11 +11,10 @@
             <Node name="CataParuto" expanded="True">
               <Node name="Content" expanded="True">
                 <Node name="visual" expanded="True">
-                  <Node name="sprite" expanded="True">
-                    <Node name="Cat_01.png" selected="True" />
-                  </Node>
+                  <Node name="sprite" expanded="True" />
                 </Node>
               </Node>
+              <Node name="CataParuto.cs" selected="True" />
             </Node>
           </Node>
         </State>

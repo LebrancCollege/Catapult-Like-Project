@@ -13,6 +13,11 @@ namespace CataParuto
         private SpriteBatch _spriteBatch;
 
         Texture2D _cat;
+        Vector2 _catPos;
+
+        int speed;
+
+        KeyboardState _currentKey;
 
         public CataParuto()
         {
@@ -37,6 +42,7 @@ namespace CataParuto
 
             // TODO: use this.Content to load your game content here
             _cat = Content.Load<Texture2D>("visual/sprite/Cat_01");
+            _catPos = new Vector2(100, 100);
         }
 
         protected override void Update(GameTime gameTime)
@@ -45,6 +51,17 @@ namespace CataParuto
                 Exit();
 
             // TODO: Add your update logic here
+            _currentKey = Keyboard.GetState();
+            speed = 3;
+
+            if(_currentKey.IsKeyDown(Keys.Right))
+            {
+                _catPos.X += speed;   
+            }
+            if(_currentKey.IsKeyDown(Keys.Left))
+            {
+                _catPos.X -= speed;
+            }
 
             base.Update(gameTime);
         }
@@ -57,7 +74,7 @@ namespace CataParuto
             _spriteBatch.Begin();
 
             // Drawing
-            _spriteBatch.Draw(_cat, new Vector2(100, 100), Color.White);
+            _spriteBatch.Draw(_cat, _catPos, Color.White);
 
             _spriteBatch.End();
 
