@@ -1,15 +1,21 @@
 ﻿<Properties GitUserInfo="UsingGIT" StartupConfiguration="{C8813326-35F0-47A8-AC70-A92B49298EF4}|Default">
   <MonoDevelop.Ide.Workbench>
     <Files>
-      <File FileName="CataParuto/Program.cs" Line="10" Column="45" />
-      <File FileName="CataParuto/Game1.cs" Line="7" Column="23" />
+      <File FileName="CataParuto/Program.cs" Line="11" Column="28" />
+      <File FileName="CataParuto/CataParuto.cs" Line="39" Column="68" />
     </Files>
     <Pads>
       <Pad Id="ProjectPad">
         <State name="__root__">
           <Node name="CataParuto" expanded="True">
             <Node name="CataParuto" expanded="True">
-              <Node name="CataParuto.cs" selected="True" />
+              <Node name="Content" expanded="True">
+                <Node name="visual" expanded="True">
+                  <Node name="sprite" expanded="True">
+                    <Node name="Cat_01.png" selected="True" />
+                  </Node>
+                </Node>
+              </Node>
             </Node>
           </Node>
         </State>
@@ -22,5 +28,5 @@
     <BreakpointStore />
   </MonoDevelop.Ide.DebuggingService.Breakpoints>
   <MultiItemStartupConfigurations />
-  <MonoDevelop.Ide.ItemProperties.CataParuto FirstBuild="True" PreferredExecutionTarget="MonoDevelop.Default" />
+  <MonoDevelop.Ide.ItemProperties.CataParuto PreferredExecutionTarget="MonoDevelop.Default" />
 </Properties>
